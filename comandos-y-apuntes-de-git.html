@@ -46,6 +46,13 @@
             <ul class="codigo"><li>git config --global user.name "Exe Gómez"</li></ul>
             <ul class="codigo"><li>git config --global user.email "exegom@hotmail.com"</li></ul>
         </div>
+        <div class="inicial">
+            <h3>En caso de iniciarse el modo edición de texto y no poder salir:</h3>
+            <ul class="codigo"><li>esc+shift+zz</li></ul>
+            <p>En realidad, esto guarda lo ingresado</p>
+            <p>Para editar el texto:</p>
+            <ul class="codigo"><li>esc y luego i</li></ul>
+        </div>
         <h3 class="titulo">Iniciar repositorio</h3>
         <p>Me sitúo dentro del directorio y ejecuto:</p>
         <ul class="codigo">
@@ -65,6 +72,20 @@
         <p>Eso pasa porque cached significa que está en la RAM, y no coincide lo guardado con lo cacheado</p>
         <p>para sacarlo de la lista de seguimiento debo usar:</p>
         <ul class="codigo"><li>git rm --cached nombredearchivo</li></ul>
+        <p>Para agregar a todos los archivos de una sola vez puedo usar</p>
+        <ul class="codigo"><li>git add .</li></ul>
+        <p>donde "." significa la carpeta donde estoy trabajando</p>
+        <h3 class="titulo">Realizar los commits</h3>
+        <p>Una vez tenga los primeros cambios seguros para enviar al repositorio, tipeo:</p>
+        <ul class="codigo"><li>git commit -m "texto para el primer commit"</li></ul>
+        <p>Para hacer un nuevo commit luego de hacer cambios en los archivos debo volver a agregar los cambios con <span class="cursiva">git add nombrearchivo</span></p>
+        <p>Si quiero revisar el historial de commits realizados a un archivo uso:</p>
+        <ul class="codigo"><li>git log nombrearchivo</li></ul>
+        <p>También puedo ver los cambios realizados utilizando</p>
+        <ul class="codigo"><li>git show nombrearchivo</li></ul>
+        <p>Si quiero comparar los cambios realizados entre diferentes commits uso:</p>
+        <ul class="codigo"><li>git diff hashcommit1 hashcommit2</li></ul>
+        
     </div>
 </body>
 </html>
