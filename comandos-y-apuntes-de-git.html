@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 1em;
+            background-color: rgb(44, 35, 35);
+        }
+        .container{
+            max-width: 75%;
+            background-color: black;
+            color: white;
+            padding: 3em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .inicial{
+            margin: 1.5%;
+            padding: 1.5%;
+            border: 3px solid rgb(211, 211, 211);
+        }
+        .titulo{
+            margin: 2em;
+        }
+        .codigo{
+            border: 3px solid gray;
+            margin: 1em;
+        }
+        .cursiva{
+            font-style: italic;
+        }
+    </style>
+    <title>Comandos y apuntes de GIT</title>
+</head>
+<body>
+    <div class="container">
+        <div class="inicial">
+            <h3>Antes de usarlo, configuración básica de GIT</h3>
+            <p>Para ver como funcionan todas las configuraciones en general tipeo en consola:</p>
+            <ul class="codigo"><li>git config</li></ul>
+            <p>Para ver la configuración por defecto:</p>
+            <ul class="codigo"><li>git config --list</li></ul>
+            <p>Para comenzar a configurar, en este caso globalmente, tipeo:</p>
+            <ul class="codigo"><li>git config --global user.name "Exe Gómez"</li></ul>
+            <ul class="codigo"><li>git config --global user.email "exegom@hotmail.com"</li></ul>
+        </div>
+        <h3 class="titulo">Iniciar repositorio</h3>
+        <p>Me sitúo dentro del directorio y ejecuto:</p>
+        <ul class="codigo">
+            <li>git init</li>
+        </ul>
+        <p>Esto va a crear una carpeta oculta de nombre ".git" que contiene la base de datos de los cambios atómicos de los archivos del directorio</p>
+        <p>La línea de comandos pasará a tener la palabra (master) a continuación del nombre del directorio</p>
+        <h3 class="titulo">Chequear estado del repositorio</h3>
+        <ul class="codigo"><li>git status</li></ul>
+        <p>Me va a mostrar en qué rama estoy y cuales son los archivos sin agregar (untracked files)</p>
+        <h3 class="titulo">Agregar archivos a la lista de seguimiento de cambios</h3>
+        <ul class="codigo"><li>git add "nombrearchivo"</li></ul>
+        <p>Una vez agregado en la consola no se va a ver cambios, para verlo vuelvo a "git status"</p>
+        <p>Ahí va a figurar entre los cambios a comprometer</p>
+        <p>Si uso <span class="cursiva">git rm nombrearchivo</span> sin haberle hecho cambios, no va a pasar nada, está en caché</p>
+        <p>Si hago cambios, los guardo, y luego ejecuto ese mismo comando, me va a dar error</p>
+        <p>Eso pasa porque cached significa que está en la RAM, y no coincide lo guardado con lo cacheado</p>
+        <p>para sacarlo de la lista de seguimiento debo usar:</p>
+        <ul class="codigo"><li>git rm --cached nombredearchivo</li></ul>
+    </div>
+</body>
+</html>

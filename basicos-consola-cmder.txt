@@ -1,0 +1,17 @@
+cd <letraunidad:> o cd </letraunidad> me lleva a la raiz de la unidad
+pwd     : devuelve la ruta en la que estoy parado
+cd      : change directory
+cd+ 2 veces TAB: me da un ls del directorio
+ls      : listar. Te devuelve nombres de los archivos y carpetas en el directorio
+ls -al  : lo que sigue al ls luego del "-" son argumentos. "a" pide todos los archivos incluyendo hidden. "l" pide que los muestre en lista
+clear   : limpia la consola, tambien puedo usar ctrl+l para desplazar las líneas pero no las borra
+si escribo la primera letra de algún archivo/carpeta y presiono TAB me autocompleta el nombre. Si hay más de un resultado no aparece, pero si toco dos veces el TAB, me los lista.
+mkdir <nombrecarpeta>   : crea carpeta con ese nombre
+touch <archivo.txt> : crea un archivo txt vacío
+cat <archivo.txt>   : muestra el contenido del archivo.
+history : me muetra qué comandos estuve usando
+rm <archivo.txt>    : borra el archivo
+rm --help   : me da la ayuda de cualquier comando
+
+si escribo "-" da a entender que voy a dar parámetros con letras
+si uso "--" doy a entender que voy a usar palabras como parámetros
