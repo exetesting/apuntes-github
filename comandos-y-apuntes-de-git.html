@@ -4,34 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body{
-            margin: 1em;
-            background-color: rgb(44, 35, 35);
-        }
-        .container{
-            max-width: 75%;
-            background-color: black;
-            color: white;
-            padding: 3em;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        .inicial{
-            margin: 1.5%;
-            padding: 1.5%;
-            border: 3px solid rgb(211, 211, 211);
-        }
-        .titulo{
-            margin: 2em;
-        }
-        .codigo{
-            border: 3px solid gray;
-            margin: 1em;
-        }
-        .cursiva{
-            font-style: italic;
-        }
-    </style>
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Comandos y apuntes de GIT</title>
 </head>
 <body>
@@ -52,6 +25,8 @@
             <p>En realidad, esto guarda lo ingresado</p>
             <p>Para editar el texto:</p>
             <ul class="codigo"><li>esc y luego i</li></ul>
+            <p>Cuando estoy revisando info y no puedo salir de ese modo porque es muy largo:</p>
+            <ul class="codigo"><li>letra q</li></ul>
         </div>
         <h3 class="titulo">Iniciar repositorio</h3>
         <p>Me sitúo dentro del directorio y ejecuto:</p>
@@ -75,7 +50,7 @@
         <p>Para agregar a todos los archivos de una sola vez puedo usar</p>
         <ul class="codigo"><li>git add .</li></ul>
         <p>donde "." significa la carpeta donde estoy trabajando</p>
-        <h3 class="titulo">Realizar los commits</h3>
+        <h3 class="titulo">Trabajar con commits</h3>
         <p>Una vez tenga los primeros cambios seguros para enviar al repositorio, tipeo:</p>
         <ul class="codigo"><li>git commit -m "texto para el primer commit"</li></ul>
         <p>Para hacer un nuevo commit luego de hacer cambios en los archivos debo volver a agregar los cambios con <span class="cursiva">git add nombrearchivo</span></p>
@@ -83,8 +58,18 @@
         <ul class="codigo"><li>git log nombrearchivo</li></ul>
         <p>También puedo ver los cambios realizados utilizando</p>
         <ul class="codigo"><li>git show nombrearchivo</li></ul>
+        <p>Puede que que quiera modificar el msj del último commit, para esto:</p>
+        <ul class="codigo"><li>git commit --amend</li></ul>
+        <p>Esto me va a llevar al editor vim para editar ese mismo msj</p>
+        <p>también puedo agregar a ese comando <span class="cursiva">-m "mensaje sobreescrito"</span> y me va a pisar el msj sin ingresar al editor</p>
         <p>Si quiero comparar los cambios realizados entre diferentes commits uso:</p>
         <ul class="codigo"><li>git diff hashcommit1 hashcommit2</li></ul>
+        <p>Si no especifico hash del commit me va a comparar lo que tengo en staging con lo guardado en disco</p>
+        <p>Una vez chequeados los cambios reaizados al código, si necesito volver en el tiempo entre versiones:</p>
+        <ul class="codigo"><li>git reset --soft hashdelcommit</li></ul>
+        <p>Esto revierte a la versión pero no toca lo que contiene el staging(git add)</p>
+        <p>Para soltar lo que tiene el staging al volver la versión en un solo paso uso:</p>
+        <ul class="codigo"><li>git reset --hard hashdelcommit</li></ul>
         
     </div>
 </body>
