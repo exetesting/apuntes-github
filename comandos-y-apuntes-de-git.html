@@ -8,8 +8,8 @@
     <title>Comandos y apuntes de GIT</title>
 </head>
 <body>
-    <div class="container">
-        <div class="inicial">
+    <article class="container">
+        <article class="tema">
             <h3>Antes de usarlo, configuración básica de GIT</h3>
             <p>Para ver como funcionan todas las configuraciones en general tipeo en consola:</p>
             <ul class="codigo"><li>git config</li></ul>
@@ -18,8 +18,8 @@
             <p>Para comenzar a configurar, en este caso globalmente, tipeo:</p>
             <ul class="codigo"><li>git config --global user.name "Exe Gómez"</li></ul>
             <ul class="codigo"><li>git config --global user.email "exegom@hotmail.com"</li></ul>
-        </div>
-        <div class="inicial">
+        </article>
+        <article class="tema">
             <h3>En caso de iniciarse el modo edición de texto y no poder salir:</h3>
             <ul class="codigo"><li>esc+shift+zz</li></ul>
             <p>En realidad, esto guarda lo ingresado</p>
@@ -27,49 +27,63 @@
             <ul class="codigo"><li>esc y luego i</li></ul>
             <p>Cuando estoy revisando info y no puedo salir de ese modo porque es muy largo:</p>
             <ul class="codigo"><li>letra q</li></ul>
-        </div>
-        <h3 class="titulo">Iniciar repositorio</h3>
-        <p>Me sitúo dentro del directorio y ejecuto:</p>
-        <ul class="codigo">
-            <li>git init</li>
-        </ul>
-        <p>Esto va a crear una carpeta oculta de nombre ".git" que contiene la base de datos de los cambios atómicos de los archivos del directorio</p>
-        <p>La línea de comandos pasará a tener la palabra (master) a continuación del nombre del directorio</p>
-        <h3 class="titulo">Chequear estado del repositorio</h3>
-        <ul class="codigo"><li>git status</li></ul>
-        <p>Me va a mostrar en qué rama estoy y cuales son los archivos sin agregar (untracked files)</p>
-        <h3 class="titulo">Agregar archivos a la lista de seguimiento de cambios</h3>
-        <ul class="codigo"><li>git add "nombrearchivo"</li></ul>
-        <p>Una vez agregado en la consola no se va a ver cambios, para verlo vuelvo a "git status"</p>
-        <p>Ahí va a figurar entre los cambios a comprometer</p>
-        <p>Si uso <span class="cursiva">git rm nombrearchivo</span> sin haberle hecho cambios, no va a pasar nada, está en caché</p>
-        <p>Si hago cambios, los guardo, y luego ejecuto ese mismo comando, me va a dar error</p>
-        <p>Eso pasa porque cached significa que está en la RAM, y no coincide lo guardado con lo cacheado</p>
-        <p>para sacarlo de la lista de seguimiento debo usar:</p>
-        <ul class="codigo"><li>git rm --cached nombredearchivo</li></ul>
-        <p>Para agregar a todos los archivos de una sola vez puedo usar</p>
-        <ul class="codigo"><li>git add .</li></ul>
-        <p>donde "." significa la carpeta donde estoy trabajando</p>
-        <h3 class="titulo">Trabajar con commits</h3>
-        <p>Una vez tenga los primeros cambios seguros para enviar al repositorio, tipeo:</p>
-        <ul class="codigo"><li>git commit -m "texto para el primer commit"</li></ul>
-        <p>Para hacer un nuevo commit luego de hacer cambios en los archivos debo volver a agregar los cambios con <span class="cursiva">git add nombrearchivo</span></p>
-        <p>Si quiero revisar el historial de commits realizados a un archivo uso:</p>
-        <ul class="codigo"><li>git log nombrearchivo</li></ul>
-        <p>También puedo ver los cambios realizados utilizando</p>
-        <ul class="codigo"><li>git show nombrearchivo</li></ul>
-        <p>Puede que que quiera modificar el msj del último commit, para esto:</p>
-        <ul class="codigo"><li>git commit --amend</li></ul>
-        <p>Esto me va a llevar al editor vim para editar ese mismo msj</p>
-        <p>también puedo agregar a ese comando <span class="cursiva">-m "mensaje sobreescrito"</span> y me va a pisar el msj sin ingresar al editor</p>
-        <p>Si quiero comparar los cambios realizados entre diferentes commits uso:</p>
-        <ul class="codigo"><li>git diff hashcommit1 hashcommit2</li></ul>
-        <p>Si no especifico hash del commit me va a comparar lo que tengo en staging con lo guardado en disco</p>
-        <p>Una vez chequeados los cambios reaizados al código, si necesito volver en el tiempo entre versiones:</p>
-        <ul class="codigo"><li>git reset --soft hashdelcommit</li></ul>
-        <p>Esto revierte a la versión pero no toca lo que contiene el staging(git add)</p>
-        <p>Para soltar lo que tiene el staging al volver la versión en un solo paso uso:</p>
-        <ul class="codigo"><li>git reset --hard hashdelcommit</li></ul>
+        </article>
+        <article class="tema">
+            <h3 class="titulo">Iniciar repositorio</h3>
+            <p>Me sitúo dentro del directorio y ejecuto:</p>
+            <ul class="codigo">
+                <li>git init</li>
+            </ul>
+            <p>Esto va a crear una carpeta oculta de nombre ".git" que contiene la base de datos de los cambios atómicos de los archivos del directorio</p>
+            <p>La línea de comandos pasará a tener la palabra (master) a continuación del nombre del directorio</p>
+        </article>
+        <article class="tema">
+            <h3 class="titulo">Chequear estado del repositorio</h3>
+            <ul class="codigo"><li>git status</li></ul>
+            <p>Me va a mostrar en qué rama estoy y cuales son los archivos sin agregar (untracked files)</p>
+        </article>
+        <article class="tema">
+            <h3 class="titulo">Agregar archivos a la lista de seguimiento de cambios</h3>
+            <ul class="codigo"><li>git add "nombrearchivo"</li></ul>
+            <p>Una vez agregado en la consola no se va a ver cambios, para verlo vuelvo a "git status"</p>
+            <p>Ahí va a figurar entre los cambios a comprometer</p>
+            <p>Si uso <span class="cursiva">git rm nombrearchivo</span> sin haberle hecho cambios, no va a pasar nada, está en caché</p>
+            <p>Si hago cambios, los guardo, y luego ejecuto ese mismo comando, me va a dar error</p>
+            <p>Eso pasa porque cached significa que está en la RAM, y no coincide lo guardado con lo cacheado</p>
+            <p>para sacarlo de la lista de seguimiento debo usar:</p>
+            <ul class="codigo"><li>git rm --cached nombredearchivo</li></ul>
+            <p>Para agregar a todos los archivos de una sola vez puedo usar</p>
+            <ul class="codigo"><li>git add .</li></ul>
+            <p>donde "." significa la carpeta donde estoy trabajando</p>
+        </article>
+        <article class="tema">
+            <h3 class="titulo">Trabajar con commits</h3>
+            <p>Una vez tenga los primeros cambios seguros para enviar al repositorio, tipeo:</p>
+            <ul class="codigo"><li>git commit -m "texto para el primer commit"</li></ul>
+            <p>Para hacer un nuevo commit luego de hacer cambios en los archivos debo volver a agregar los cambios con <span class="cursiva">git add nombrearchivo</span></p>
+            <p>Si quiero revisar el historial de commits realizados a un archivo uso:</p>
+            <ul class="codigo"><li>git log nombrearchivo</li></ul>
+            <p>También puedo ver los cambios realizados utilizando</p>
+            <ul class="codigo"><li>git show nombrearchivo</li></ul>
+            <p>Puede que que quiera modificar el msj del último commit, para esto:</p>
+            <ul class="codigo"><li>git commit --amend</li></ul>
+            <p>Esto me va a llevar al editor vim para editar ese mismo msj</p>
+            <p>también puedo agregar a ese comando <span class="cursiva">-m "mensaje sobreescrito"</span> y me va a pisar el msj sin ingresar al editor</p>
+            <p>Si quiero comparar los cambios realizados entre diferentes commits uso:</p>
+            <ul class="codigo"><li>git diff hashcommit1 hashcommit2</li></ul>
+            <p>Si no especifico hash del commit me va a comparar lo que tengo en staging con lo guardado en disco</p>
+            <p>Una vez chequeados los cambios reaizados al código, si necesito volver en el tiempo entre versiones:</p>
+            <ul class="codigo"><li>git reset --soft hashdelcommit</li></ul>
+            <p>Esto revierte a la versión pero no toca lo que contiene el staging(git add)</p>
+            <p>Para soltar lo que tiene el staging al volver la versión en un solo paso uso:</p>
+            <ul class="codigo"><li>git reset --hard hashdelcommit</li></ul>
+            <p>También puedo sólamente chequear lo que hay en estados anteriores sin resetear:</p>
+            <ul class="codigo"><li>git checkout hashdelcommit nombredelarchivo</li></ul>
+            <p>Para volver al master:</p>
+            <ul class="codigo"><li>git checkout master nombredelarchivo</li></ul>
+            <p>Debo tener precaución, si realizo un commit en otro estado de historia borro los commits posteriores</p>
+    </article>
+        
         
     </div>
 </body>
