@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Reparar repositorio en caso de error, archivos corruptos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Reparar repositorio en caso de error, archivos corruptos</h1>
+        <article class="tema">
+            <p>En su momento, falló la aplicación que edita dentro de la consola Git Bash (vim).
+                Quizá el problema fue mío, o quizá sea que estaba sincronizando la carpeta con GDrive.
+                Lo importante, lo solucioné. Los pasos fueron:
+            </p>
+            <ul class="codigo">
+            <li>cd .git</li>
+            <li>rm -f index.lock</li>
+            <li>rm -f index</li>
+            <li>git reset</li>
+            </ul>
+            <p>Básicamente, eliminé la carpeta "index" y el archivo "index.lock". "Index.lock" teóricamente está dando la indicación de que está abierto el editor de commit.</p>
+            <p>Luego, con git reset volví a armar el índice, sin haber perdido los commits anteriores</p>
+            <h1>😁</h1>
+        </article>
+    </div>
+
+</body>
+</html>
