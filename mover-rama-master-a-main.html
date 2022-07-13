@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Mover todos los cambios de MASTER a main</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Mover todos los cambios de MASTER a main</h1>
+        <article class="tema">
+            <p>Esto puede que sea más que necesario a la hora de trabajar con GitHub, dado que ahora usa "main" como rama principal</p>
+            <p>Para hacer esto debo ejecutar en Git Bash:</p>
+            <ul class="codigo"><li>git branch -M main</li></ul>
+            <p>Y puedo chequear que se haya realizado este cambio con git log</p>
+            <p>Para no tener que realizar este cambio cada vez que haga un repositorio nuevo puedo usar:</p>
+            <ul class="codigo"><li>git config --global init.defaultBranch main</li></ul>
+            <p>Esto se debe a que sólo GitHub implementó ese cambio. Git sigue trabajando con MASTER como siempre</p>
+        </article>
+    </div>
+</body>
+</html>
