@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Trabajar con repositorios remotos</h1>
+        <p>En este caso voy a usar GitHub</p>
+        <article class="tema">
+            <h3>Asignar origen</h3>
+            <p>Para asignar un origen remoto para mi repositorio uso:</p>
+            <ul class="codigo"><li>git remote add origin urldelrepositorio</li></ul>
+            <p>para verificar el cambio tipeo:</p>
+            <ul class="codigo"><li>git remote -v</li></ul>
+            <p>y me tiene que devolver las direcciones para hacer FETCH y PUSH</p>
+        </article>
+        <article class="tema">
+            <h3>Enviar cambios</h3>
+            <ul class="codigo"><li>git push origin master(o nombre de la rama)</li></ul>
+            <p>Si no agregué las credenciales de GitHub antes me las va a pedir en este paso</p>
+            <p>Si los cambios en el repo remoto están integrados con la versión que tenemos en el equipo no habrá problemas. Si en cambio, no hemos traido los cambios desde allí, tendremos que traer esos cambios</p>
+        </article>
+        <article class="tema">
+            <h3>Traer cambios del repositorio remoto</h3>
+            <p>Para descargar cambios a mi reporitorio local uso:</p>
+            <ul class="codigo"><li>git pull origin master(o nombre de la rama)</li></ul>
+            <p>Si me devuelve un warning advirtiendo que no hay commits en común puedo forzar el envío usando</p>
+            <ul class="codigo"><li>git pull origin master(o nombre de la rama) --allow-unrelated-histories</li></ul>
+            <p>esto va a traer los cambios y archivos del remoto y voy a estar listo para enviar mis propios commits usando PUSH</p>
+        </article>
+    </div>
+</body>
+</html>
